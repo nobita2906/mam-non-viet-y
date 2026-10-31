@@ -1,0 +1,281 @@
+/* ==========================================================================
+   TRƯỜNG MẦM NON VIỆT Ý & BÁN TRÚ TK ACADEMY - DESIGN SYSTEM & STYLES
+   ========================================================================== */
+
+:root {
+  --primary: #f59e0b;
+  --primary-hover: #d97706;
+  --primary-light: #fef3c7;
+  --primary-dark: #b45309;
+  --secondary: #0ea5e9;
+  --secondary-hover: #0284c7;
+  --secondary-light: #e0f2fe;
+  --accent-red: #ef4444;
+  --accent-green: #10b981;
+  --text-dark: #1e293b;
+  --text-muted: #64748b;
+  --bg-warm: #fffbeb;
+  --bg-soft: #f8fafc;
+  --card-border: rgba(245, 158, 11, 0.2);
+  --shadow-warm: 0 10px 25px -5px rgba(245, 158, 11, 0.15), 0 8px 10px -6px rgba(245, 158, 11, 0.1);
+  --shadow-card: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 10px;
+}
+
+/* Custom scroll behavior */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: 'Nunito', 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--text-dark);
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Font helpers */
+.font-bango {
+  font-family: 'Nunito', cursive, sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+}
+
+/* Header blur effect */
+.header-glass {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(245, 158, 11, 0.15);
+  transition: all 0.3s ease;
+}
+
+.header-scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  height: 70px !important;
+}
+
+/* Kindergarten Banner Wave & Shapes */
+.hero-gradient {
+  background: radial-gradient(circle at 10% 20%, #fff7ed 0%, #ffedd5 40%, #fed7aa 100%);
+  position: relative;
+}
+
+.wave-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 50px;
+}
+
+/* Floating animation elements */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(3deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 15px rgba(245, 158, 11, 0.4); }
+  50% { box-shadow: 0 0 25px rgba(245, 158, 11, 0.8); }
+}
+
+.animate-float {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s infinite;
+}
+
+/* Custom list items like Royal School but with warm kindergarten theme */
+.viety-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.viety-list li {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+.viety-list li::before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  font-size: 18px;
+  color: #f59e0b;
+}
+
+/* Swiper custom pagination & buttons */
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #cbd5e1;
+  opacity: 0.6;
+  transition: all 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  width: 28px;
+  border-radius: 6px;
+  background: #f59e0b !important;
+  opacity: 1;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 44px !important;
+  height: 44px !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(245, 158, 11, 0.3) !important;
+  border-radius: 50% !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  color: #ea580c !important;
+  transition: all 0.25s ease !important;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 18px !important;
+  font-weight: bold !important;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: #f59e0b !important;
+  color: #ffffff !important;
+  transform: scale(1.08);
+}
+
+/* Form Styles */
+.form-input {
+  width: 100%;
+  padding: 12px 18px;
+  border-radius: 9999px;
+  border: 1.5px solid #e2e8f0;
+  background: #ffffff;
+  color: #1e293b;
+  font-size: 15px;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: #f59e0b;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.2);
+}
+
+.form-input::placeholder {
+  color: #94a3b8;
+}
+
+/* Accordion (Details / Summary) */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary {
+  list-style: none;
+  outline: none;
+}
+
+details[open] .arrow-indicator {
+  transform: rotate(90deg);
+}
+
+/* Floating Actions Bar */
+.floating-actions {
+  position: fixed;
+  right: 18px;
+  bottom: 24px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.floating-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  text-decoration: none;
+}
+
+.floating-btn:hover {
+  transform: scale(1.12);
+}
+
+.floating-btn.hotline {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.floating-btn.zalo {
+  background: linear-gradient(135deg, #0284c7, #0369a1);
+}
+
+.floating-btn.back-to-top {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+/* Pulse ring effect for hotline */
+.hotline-pulse::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid #ef4444;
+  animation: pulseRing 1.8s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+}
+
+@keyframes pulseRing {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+/* Badge pill */
+.badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .floating-actions {
+    right: 12px;
+    bottom: 16px;
+    gap: 10px;
+  }
+  .floating-btn {
+    width: 46px;
+    height: 46px;
+  }
+}
